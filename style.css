@@ -1,0 +1,335 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7ff;
+    scroll-behavior: smooth;
+}
+
+/* CV Container */
+.cv-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #3385ff;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #3385ff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Titles */
+h1, h2 {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #004080;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin-top: 15px;
+}
+
+/* Skills (List) */
+.skills {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    background-color: #99ccff;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.skills li:hover {
+    background-color: #80bfff;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #004080;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 0 0 8px 8px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #004080;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #00264d;
+    transform: scale(1.05);
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #004d99;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: #004080;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        margin-bottom: 20px;
+    }
+
+    nav {
+        margin: 10px 0;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Styling umum untuk bagian pendidikan */
+#pendidikan {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul pendidikan */
+#pendidikan h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk setiap item pendidikan */
+#pendidikan ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Ensures items are aligned horizontally */
+    flex-wrap: wrap; /* Allows wrapping to the next line if necessary */
+    gap: 20px; /* Creates space between items */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+/* Styling untuk item pendidikan */
+#pendidikan ul li {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 180px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Mengatur item secara vertikal */
+    align-items: center; /* Pusatkan konten secara horizontal */
+}
+#pendidikan .edu-photo {
+    width: 200px; /* Atur ukuran lebar gambar */
+    height: 180px; /* Atur ukuran tinggi gambar */
+    object-fit: cover; /* Gambar tetap proporsional dan mengisi kotak */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px; /* Jarak dengan teks di bawahnya */
+}
+
+/* Styling untuk nama dan tahun pendidikan */
+#pendidikan ul li strong {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px; /* Memberikan jarak di bawah logo */
+}
+
+/* Styling untuk deskripsi tahun pendidikan */
+#pendidikan ul li span {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+#pendidikan ul li iframe {
+    margin-top: 10px; /* Jarak antara peta dan teks di atasnya */
+    border-radius: 8px; /* Menambahkan sudut membulat pada peta */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk iframe */
+}
+
+        /* Gaya umum untuk galeri gambar */
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+    
+        .photo-gallery img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+        }
+    
+        .photo-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    
+        /* Gaya untuk modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+    
+        /* Animasi untuk fade-in */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    
+        .modal-image {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .modal-image:hover {
+            transform: scale(1.05);
+        }
+    
+        /* Gaya untuk tombol navigasi */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .nav-btn:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    
+        .prev-btn {
+            left: 10px;
+        }
+    
+        .next-btn {
+            right: 10px;
+        }
+    /* Styling untuk ikon maps */
+.map-icon {
+    width: 40px; /* Atur ukuran ikon */
+    height: 40px;
+    margin-top: 10px; /* Jarak antara ikon dan teks di atasnya */
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.map-icon:hover {
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
